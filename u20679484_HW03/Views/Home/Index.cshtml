@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @ViewBag.Message;
+</div>
+
+<div class="row jumbotron">
+
+    <div class="col-md-8">
+        <h2>myMedia</h2>
+        <h3>Homework Assingement by Lokusa</h3>
+
+        <p>
+            This assignment is all about media uploading system. It consist of 4 pages which are the Home page,File page,Images page,Video page a About me page.Below is how the program runs, basically the functioality of the whole project.This project is strictly on uses HTML, Javascrpt,Responsive web design,CSS and MVC project using c#.
+        </p>
+        The home page consist of brief description about the project then it has a form which with 3 radio buttos that the user uses to selct the media file he or she wants to upload and also a choose  file button that allows the user to choose file from their desktop and uploead to the project. Once the user has selcted the type of file the wat to uploead i.e image,video or document
+        <p>
+            the user will then need to submit the media file using the submit button. The user will the head to the navigation bar and click on the type of file they picked wheter it is video,image or document. The user will  see the file they have upload on under view.
+        </p>
+            The user will be able to click on the file and view it in a bigger size, the user will be able to download ad delete the file if the do not need it anymore.The video that the user clicks will play when she clicks on it will alow user to  be able to pause. The uploaded image can also be downloaded and  deleted by the user the image can e zooomed in to see the picture clearly
+        <p>
+            Whe the user clicks on the About me bio the user will e ale to read a brief io about myself
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Option Sellect</h2>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <form>
+                <div class="form-group">
+
+                    <input type="radio" name="File" value="A">File<br />
+                </div>
+                <div class="form-group">
+
+                    <input type="radio" name="File" value="A">Images<br />
+                </div>
+                <div class="form-group form-check">
+
+                    <input type="radio" name="File" value="A">Video<br />
+                </div>
+                <div class="form-group form-check">
+                    <input type="file" name="file" id="file">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        }
+    </div>
+
+</div>
